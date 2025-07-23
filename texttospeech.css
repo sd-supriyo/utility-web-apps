@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 700px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #fab23c;
+}
+
+textarea {
+    width: 100%;
+    max-width: 640px;
+    height: 200px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+textarea::placeholder {
+    font-size: 15px;
+    color: #dddddd;
+}
+
+.row {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+
+
+button {
+    border: none;
+    outline: none;
+    padding: 8px 30px;
+    border-radius: 30px;
+    background-color: #80647c;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    justify-content: center;    
+}
+
+button:hover {
+    background-color: #402c3c;
+    transform: scale(1.05);
+}
+
+button img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+select {
+    flex: 1;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /*background-color: rgba(255, 255, 255, 0.15);*/
+    background-color: #585464;
+    color: white;
+    backdrop-filter: blur(6px);
+    appearance: none;
+    background-image: url("assets/dropdown.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 20px center;
+    transition: all 0.3s ease;
+}
+
+
+
+@media (min-width: 500px) {
+    .row {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    select{
+        padding: 0 20px;
+    }
+
+    .hero h1{
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    button{
+        margin: 0;
+        padding: 12px 30px;
+    }
+}
+
+
