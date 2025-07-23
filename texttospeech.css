@@ -104,6 +104,8 @@ textarea {
     margin-bottom: 20px;
     backdrop-filter: blur(6px);
     transition: all 0.3s ease;
+
+    resize: none;
 }
 
 textarea::placeholder {
