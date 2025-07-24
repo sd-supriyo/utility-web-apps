@@ -196,6 +196,11 @@ select {
         margin: 0;
         padding: 12px 30px;
     }
+
+    textarea::placeholder {
+    font-size: 15px;
+    color: #dddddd;
+}
 }
 
 
