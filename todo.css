@@ -244,6 +244,10 @@ ul li span:hover {
         border-radius: 20px;
     }
 
+    input{
+        margin-left: 2px;
+    }
+
     button{
         width: 98%; 
         margin-top: 20px;
