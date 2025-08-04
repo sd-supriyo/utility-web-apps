@@ -6,6 +6,38 @@
   box-sizing: border-box;
 }
 
+.userNameDisplay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 14px;
+
+  padding: 8px 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+
+  animation: slideDown 1s ease-out;
+  transform: translateY(-30px);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .footer {
   position: fixed;
   bottom: 0;

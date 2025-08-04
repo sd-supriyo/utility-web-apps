@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utility Web Apps</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <title>Utility WebApps</title>
+    <link rel="stylesheet" href="index.css" />
 </head>
+
 <body>
-  <div class="container">
-    <h1>🔧 Utility Web Apps</h1>
-    <div class="card-grid">
-      
-      <div class="card" onclick="goToApp('weather.html')">
-        <div class="icon">🌦️</div>
-        <div class="text">Weather Checker</div>
-      </div>
 
-      
-      <div class="card" onclick="goToApp('todo.html')">
-        <div class="icon">📝</div>
-        <div class="text">To-Do List</div>
-      </div>
-
-      
-      <div class="card" onclick="goToApp('passwordgenerator.html')">
-        <div class="icon">🔐</div>
-        <div class="text">Password Generator</div>
-      </div>
-
-      <div class="card" onclick="goToApp('texttospeech.html')">
-        <div class="icon">🗣️</div>
-        <div class="text">Text to Speech</div>
-      </div>
-
-
-
-      
+    <div class="container">
+        <h2>Welcome! Please enter your name</h2>
+        <input type="text" id="username" placeholder="Enter your name" />
+        <br/>
+        <button onclick="saveName()">Continue</button>
     </div>
-  </div>
 
-  <div class="footer">
-  supriyodana@gmail.com
-  </div>
+    <script>
+        const storedName = localStorage.getItem("userName");
 
+        if (storedName) {
+            //alert("Welcome back, " + storedName + "!");
+            window.location.href = "homepage.html";
+        }
 
-  <script src="script.js"></script>
+        function saveName() {
+            const name = document.getElementById("username").value.trim();
+            if (name) {
+                localStorage.setItem("userName", name);
+                window.location.href = "homepage.html";
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+    </script>
 </body>
+
 </html>
+
+
